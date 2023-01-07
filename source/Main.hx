@@ -40,7 +40,7 @@ class Main extends Sprite
 
 	public static function main():Void
 	{
-		Lib.current.addchild(new Main());
+		Lib.current.addChild(new Main());
 	}
 
 	public function new()
@@ -84,10 +84,10 @@ class Main extends Sprite
 	  SUtil.check();
 	
 		ClientPrefs.loadDefaultKeys();
-		addchild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, skipSplash, startFullscreen));
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
-		addchiild(fpsVar);
+		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
 		if(fpsVar != null) {
